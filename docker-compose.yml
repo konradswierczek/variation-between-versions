@@ -1,0 +1,65 @@
+services:
+  restore-renv:
+    image: rocker/verse:4.5.0
+    volumes:
+      - ./:/home/rstudio/app
+    working_dir: /home/rstudio/app
+    command: >
+      Rscript -e "renv::restore(confirm = FALSE)"
+
+  rstudio:
+    image: rocker/verse:4.5.0
+    volumes:
+      - ./:/home/rstudio/app
+    working_dir: /home/rstudio/app
+    ports:
+      - "8787:8787"
+
+  generate-figures:
+    image: rocker/verse:4.5.0
+    volumes:
+      - ./:/home/rstudio/app
+    working_dir: /home/rstudio/app
+    command: >
+      bash -c "
+      Rscript src/read_data.R &&
+      Rscript src/select_algos.R &&
+      Rscript src/calculate_vbv.R &&
+      src/figures/figure_1.R &&
+      src/figures/figure_2.R &&
+      src/figures/figure_3.R &&
+      src/figures/figure_4.R &&
+      src/figures/figure_5.R &&
+      src/figures/figure_6.R &&
+      src/figures/figure_7.R &&
+      src/figures/figure_8.R
+      "
+
+  run-inference:
+    image: rocker/verse:4.5.0
+    volumes:
+      - ./:/home/rstudio/app
+    working_dir: /home/rstudio/app
+    command: >
+      bash -c "
+      Rscript src/read_data.R &&
+      Rscript src/select_algos.R &&
+      Rscript src/calculate_vbv.R &&
+      src/inference.R
+      "
+
+  shiny-app:
+    image: rocker/verse:4.5.0
+    volumes:
+      - ./:/home/rstudio/app
+    working_dir: /home/rstudio/app
+    command: >
+      ls
+
+  generate-website:
+    image: rocker/verse:4.5.0
+    volumes:
+      - ./:/home/rstudio/app
+    working_dir: /home/rstudio/app
+    command: >
+      ls
