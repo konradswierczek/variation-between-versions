@@ -1,7 +1,7 @@
 albumID,setCode,yearRecorded,yearReleased,instrument,recordLabel,fullName
 bachDemus1956,bach-1,1956,1992,piano,MCA Records,Jörg Demus
 bachLandowska1951,bach-1,1951,1987,harpsichord,RCA Victor Red Seal,Wanda Landowska
-bachLeonhardt1973,bach-1,1973,1989,piano,BMG Classics,Gustav Leonhardt
+bachLeonhardt1973,bach-1,1973,1989,harpsichord,BMG Classics,Gustav Leonhardt
 bachFischer1934,bach-1,1936,2007,piano,EMI Records,Edwin Fischer
 bachGould1971,bach-1,1965,1993,piano,Sony Classical,Glenn Gould
 bachMartins1981,bach-1,1964,1994,piano,Labour Records,João Carlos Martins
@@ -11,7 +11,7 @@ bachAshkenazy2006,bach-1,2005,2006,piano,Decca,Vladimir Ashkenazy
 bachGulda1973,bach-1,1972,1995,piano,Decca,Friedrich Gulda
 bachRichter1973,bach-1,1970,1992,piano,BMG Classics,Sviatoslav Richter
 bachDemaria2014,bach-1,2014,2015,piano,Decca,Pietro De Maria
-bachTureck1953,bach-1,1953,1999,harpsichord,Deutsche Grammophon,Rosalyn Tureck
+bachTureck1953,bach-1,1953,1999,piano,Deutsche Grammophon,Rosalyn Tureck
 bachGalling1964,bach-1,1964,2006,harpsichord,Vox Records,Martin Galling
 bachKirkpatrick1959,bach-1,1959,1963,piano,Deutsche Grammophon,Ralph Kirkpatrick
 bachHamilton1964,bach-1,1964,1964,harpsichord,Everest,Malcom Hamilton

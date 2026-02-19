@@ -12,6 +12,20 @@ mean_func <- function(x, indices) {
 }
 
 # ============================================================================ #
+df_var_ins <- df_subset |>
+  left_join(
+    df_metadata_albums |> select(albumID, instrument)
+  ) |>
+  group_by(feature, tool, method, instrument) |>
+  relative_variation(
+    pieceID,
+    val
+  )
+df_var_ins <- df_var_ins |>
+  mutate(
+    feature_tool = paste(feature, tool)
+  ) |>
+  filter(!is.na(ratio))
 
 figure_6 <- grid.arrange(
   df_var_ins |>
