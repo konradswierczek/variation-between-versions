@@ -26,7 +26,7 @@ figure_6 <- grid.arrange(
         boot(
           ratio,
           mean_func,
-          R = 1000
+          R = 10000
         ),
         type = "bca"
       )$bca
@@ -103,7 +103,7 @@ figure_6 <- grid.arrange(
         boot(
           ratio,
           mean_func,
-          R = 1000
+          R = 10000
         ),
         type = "bca"
       )$bca
